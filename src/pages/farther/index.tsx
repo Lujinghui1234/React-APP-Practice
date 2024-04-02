@@ -1,20 +1,23 @@
-import { useContext } from "react";
+import { useImperativeHandle, forwardRef, useState } from "react";
 import Son from "../son";
-import { ListContext } from "../grandPa";
 
-export default function Farther() {
-  const context = useContext(ListContext);
-  console.log(context, "Farther context=====");
+const Farther = forwardRef((props: any, ref: any) => {
+  const [data, setData] = useState([1, 2, 3]);
+  useImperativeHandle(ref, () => data);
 
-  const handelClick = () => {
-    (context as any)[0].name = "cherry";
-  };
+  useImperativeHandle(ref, () => {
+    return {
+      data,
+    };
+  });
 
   return (
     <>
-      <p>Farther</p>
-      <button onClick={handelClick}>farther button</button>
+      <input />
+      <button>farther button</button>
       <Son />
     </>
   );
-}
+});
+
+export default Farther;
