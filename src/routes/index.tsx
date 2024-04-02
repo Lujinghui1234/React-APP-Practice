@@ -4,11 +4,16 @@ import { loadable } from "./utils";
 
 const Farther = loadable(() => import("~/pages/farther"));
 const Son = loadable(() => import("~/pages/son"));
+const GrandPa = loadable(() => import("~/pages/grandPa"));
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: <Navigate to="/farther" />,
+    element: <Navigate to="/grandPa" />,
+  },
+  {
+    path: "grandPa",
+    element: <GrandPa />,
   },
   {
     path: "farther",
