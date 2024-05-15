@@ -1,0 +1,42 @@
+.wrap {
+    width: 200px;
+    height: 200px;
+    border: 1px solid green;
+    border-radius: 50%;
+
+    .third {
+        width: 180px;
+        height: 180px;
+        border: 1px solid green;
+        border-radius: 50%;
+
+        .second {
+            width: 150px;
+            height: 150px;
+            border: 1px solid green;
+            border-radius: 50%;
+
+            .inner {
+                width: 120px;
+                height: 120px;
+                border: 1px solid green;
+                border-radius: 50%;
+                padding: 60px
+            }
+        }
+
+
+        /*::after {*/
+        /*    width: 3px;*/
+        /*    height: 3px;*/
+        /*    background-color: green;*/
+        /*    display: block;*/
+        /*    content: 'ok';*/
+        /*}*/
+    }
+}
+
+
+
+
+

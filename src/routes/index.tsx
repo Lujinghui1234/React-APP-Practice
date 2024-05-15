@@ -2,18 +2,18 @@ import type { RouteObject } from "react-router-dom";
 import { Navigate, useRoutes } from "react-router-dom";
 import { loadable } from "./utils";
 
-const Farther = loadable(() => import("~/pages/farther"));
-const Son = loadable(() => import("~/pages/son"));
-const GrandPa = loadable(() => import("~/pages/grandPa"));
+const Farther = loadable(
+  () => import("~/pages/farther")
+);
+const Son = loadable(
+  () => import("~/pages/son")
+);
+const ProductTable = loadable(() => import("~/pages/productTable"));
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: <Navigate to="/grandPa" />,
-  },
-  {
-    path: "grandPa",
-    element: <GrandPa />,
+    element: <Navigate to="/farther" />,
   },
   {
     path: "farther",
@@ -22,6 +22,10 @@ const routes: RouteObject[] = [
   {
     path: "son",
     element: <Son />,
+  },
+  {
+    path: "productTable",
+    element: <ProductTable />,
   },
 ];
 
